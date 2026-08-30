@@ -149,7 +149,7 @@ const Cart = () => {
                           </span>
                           {item.quantity > 1 && (
                             <p className="text-[10px] text-slate-400 font-mono mt-0.5">
-                              (₹${itemPrice.toFixed(2)} each)
+                              (₹{itemPrice.toFixed(2)} each)
                             </p>
                           )}
                         </div>

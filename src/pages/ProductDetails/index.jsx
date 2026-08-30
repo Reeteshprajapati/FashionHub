@@ -127,7 +127,7 @@ const ProductDetails = () => {
     const message = `Hello! I would like to Buy Now:
     
 *PRODUCT DETAILS*
-- Product: *₹${product.name}*
+- Product: *₹{product.name}*
 - Brand: *${brandName}*
 - ₹{selectedSizeText}
 - ₹{selectedColorText}
@@ -143,9 +143,9 @@ Please let me know the payment and delivery options. Thank you!`;
   const handleWhatsAppInquiry = () => {
     const message = `Hello! I'm interested in purchasing this product. Please provide more details:
     
-- Product: *₹${product.name}*
-- Category: *₹${product.category || ""}*
-- Price: *₹${finalPrice.toFixed(2)} INR*`;
+- Product: *₹{product.name}*
+- Category: *₹{product.category || ""}*
+- Price: *₹{finalPrice.toFixed(2)} INR*`;
 
     const url = `https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
@@ -175,7 +175,7 @@ Please let me know the payment and delivery options. Thank you!`;
 - City: *${customerCity}*
 
 *ORDER DETAILS*
-- Product: *₹${product.name}*
+- Product: *₹{product.name}*
 - Brand: *${brandName}*
 - ₹{selectedSizeText}
 - ₹{selectedColorText}
@@ -227,7 +227,7 @@ Please confirm this order. Thank you!`;
                     exit={{ opacity: 0, scale: 0.96 }}
                     transition={{ duration: 0.35, ease: "easeOut" }}
                     src={product.images[activeImageIndex]}
-                    alt={`₹${product.name} - ₹{activeImageIndex === 0 ? "Front View" : "Back View"}`}
+                    alt={`₹{product.name} - ₹{activeImageIndex === 0 ? "Front View" : "Back View"}`}
                     className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-700 ease-out cursor-zoom-in"
                   />
                 </AnimatePresence>
@@ -279,12 +279,12 @@ Please confirm this order. Thank you!`;
                 {/* Pricing Block */}
                 <div className="flex items-center space-x-4 mb-6">
                   <span className="text-2xl font-semibold text-brand-espresso dark:text-slate-100 font-mono">
-                    ₹${finalPrice.toFixed(2)}
+                    ₹{finalPrice.toFixed(2)}
                   </span>
                   {product.discount > 0 && (
                     <>
                       <span className="text-base line-through text-brand-muted/70 font-mono">
-                        ₹₹{product.price.toFixed(2)}
+                        ₹{product.price.toFixed(2)}
                       </span>
                       <span className="text-xs font-mono uppercase bg-brand-tan/10 text-brand-tan px-3 py-1 rounded">
                         Save {product.discount}%

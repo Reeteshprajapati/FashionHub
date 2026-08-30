@@ -126,12 +126,12 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
               {/* Price & Discounts */}
               <div className="flex items-center space-x-3 mb-6">
                 <span className="text-lg font-semibold text-slate-900 dark:text-slate-100 font-mono">
-                  ₹${finalPrice.toFixed(2)}
+                  ₹{finalPrice.toFixed(2)}
                 </span>
                 {product.discount > 0 && (
                   <>
                     <span className="text-sm line-through text-slate-400 font-mono">
-                      ₹₹{product.price.toFixed(2)}
+                      ₹{product.price.toFixed(2)}
                     </span>
                     <span className="text-xs bg-amber-500/10 text-amber-500 font-mono px-2 py-0.5 rounded">
                       {product.discount}% OFF
@@ -244,7 +244,7 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
 
             {/* Link to Full Details page */}
             <Link
-              to={`/product/₹${product.id}`}
+              to={`/product/₹{product.id}`}
               onClick={onClose}
               className="text-center text-[10px] uppercase tracking-widest text-slate-400 hover:text-amber-500 mt-4 transition-colors underline decoration-dotted underline-offset-4"
             >
