@@ -489,4 +489,82 @@ export const products = [
       { author: "Liam H.", rating: 4.7, comment: "Beautiful craftsmanship. The sand color is perfect with white pants.", date: "2026-05-04" }
     ]
   }
+
+  ,
+  {
+    id: 101,
+    name: "Midnight Velvet Tuxedo",
+    brand: "VINCENZO",
+    category: "Men",
+    subCategory: "Suits",
+    price: 125000,
+    discount: 5,
+    rating: 5.0,
+    images: [
+      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800",
+      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800"
+    ],
+    sizes: ["38R", "40R", "42R", "44R"],
+    colors: [{ name: "Midnight Blue", hex: "#191970" }, { name: "Obsidian", hex: "#000000" }],
+    description: "A masterclass in sartorial elegance. This tuxedo is tailored from Italian velvet with silk-satin peak lapels, ensuring you stand out at any black-tie event.",
+    details: ["100% Italian Velvet", "Silk-satin lapels and trims", "Fully lined", "Hand-stitched detailing"],
+    reviews: []
+  },
+  {
+    id: 102,
+    name: "Cashmere Turtleneck Sweater",
+    brand: "NORDIC HERITAGE",
+    category: "Men",
+    subCategory: "Knitwear",
+    price: 32000,
+    discount: 0,
+    rating: 4.8,
+    images: [
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800"
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    colors: [{ name: "Charcoal", hex: "#36454F" }, { name: "Camel", hex: "#C19A6B" }],
+    description: "Spun from the finest Mongolian cashmere, this turtleneck offers unparalleled softness and warmth without the bulk. A winter wardrobe essential.",
+    details: ["100% Pure Cashmere", "Ribbed cuffs and hem", "Slim fit", "Dry clean only"],
+    reviews: []
+  },
+  {
+    id: 103,
+    name: "Hand-Embroidered Lehenga Set",
+    brand: "AURELIA LUXE",
+    category: "Women",
+    subCategory: "Ethnic Wear",
+    price: 185000,
+    discount: 10,
+    rating: 4.9,
+    images: [
+      "https://images.unsplash.com/photo-1615886753866-79396abc446e?q=80&w=800",
+      "https://images.unsplash.com/photo-1615886753866-79396abc446e?q=80&w=800"
+    ],
+    sizes: ["Custom Fit"],
+    colors: [{ name: "Rose Gold", hex: "#B76E79" }, { name: "Mint Green", hex: "#98FF98" }],
+    description: "Exquisite bridal and festive wear. This raw silk lehenga features intricate zardozi and gota patti hand-embroidery, taking over 400 hours to craft.",
+    details: ["Raw Silk base", "Hand-embroidered zardozi", "Matching net dupatta with border", "Custom tailoring included"],
+    reviews: []
+  },
+  {
+    id: 104,
+    name: "Oversized Wool Trench Coat",
+    brand: "MAISON LUXE",
+    category: "Women",
+    subCategory: "Outerwear",
+    price: 68000,
+    discount: 15,
+    rating: 4.7,
+    images: [
+      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=800",
+      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=800"
+    ],
+    sizes: ["XS", "S", "M", "L"],
+    colors: [{ name: "Camel", hex: "#C19A6B" }, { name: "Stone", hex: "#877F7D" }],
+    description: "A modern take on a timeless classic. Made from double-faced virgin wool, this oversized trench drapes beautifully and provides sophisticated warmth.",
+    details: ["100% Virgin Wool", "Double-breasted front", "Removable tie belt", "Storm flap detailing"],
+    reviews: []
+  }
 ];
