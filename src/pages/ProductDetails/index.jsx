@@ -277,7 +277,7 @@ Please confirm this order. Thank you!`;
                 </h1>
 
                 {/* Pricing Block */}
-                <div className="flex items-center space-x-4 mb-6">
+                <div className="flex items-center space-x-4 mb-4">
                   <span className="text-2xl font-semibold text-brand-espresso dark:text-slate-100 font-mono">
                     ₹{finalPrice.toFixed(2)}
                   </span>
@@ -291,6 +291,15 @@ Please confirm this order. Thank you!`;
                       </span>
                     </>
                   )}
+                </div>
+
+                {/* Urgency Marker */}
+                <div className="mb-6 flex items-center space-x-2 text-xs font-medium text-red-600 dark:text-red-400">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                  </span>
+                  <span className="uppercase tracking-widest text-[9px] font-bold">Limited Edition: Only {(product.id % 5) + 2} left in atelier stock</span>
                 </div>
 
                 {/* Detailed Description */}
