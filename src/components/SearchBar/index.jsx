@@ -116,7 +116,7 @@ const SearchBar = ({ isOpen, onClose }) => {
                 {results.map((product) => (
                   <Link
                     key={product.id}
-                    to={`/product/₹{product.id}`}
+                    to={`/product/${product.id}`}
                     onClick={onClose}
                     className="flex items-center p-3 hover:bg-slate-100 rounded-lg border border-transparent hover:border-slate-200 transition-all duration-300 group"
                   >
@@ -133,7 +133,7 @@ const SearchBar = ({ isOpen, onClose }) => {
                         {product.name}
                       </h4>
                       <p className="text-xs font-mono text-slate-500 mt-0.5">
-                        ₹{product.price}
+                        ${product.price}
                       </p>
                     </div>
                     <FiArrowRight className="ml-auto w-4 h-4 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all" />

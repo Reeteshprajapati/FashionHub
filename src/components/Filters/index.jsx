@@ -102,7 +102,7 @@ const Filters = ({
             <div className="flex flex-col space-y-2.5 mt-2">
               <button
                 onClick={() => setSelectedCategory("")}
-                className={`text-left text-xs transition-colors pl-2 py-0.5 rounded ₹{
+                className={`text-left text-xs transition-colors pl-2 py-0.5 rounded ${
                   selectedCategory === ""
                     ? "text-amber-500 font-semibold bg-amber-500/5"
                     : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
@@ -114,7 +114,7 @@ const Filters = ({
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`text-left text-xs transition-colors pl-2 py-0.5 rounded ₹{
+                  className={`text-left text-xs transition-colors pl-2 py-0.5 rounded ${
                     selectedCategory === cat  
                       ? "text-amber-500 font-semibold bg-amber-500/5"
                       : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
@@ -133,7 +133,7 @@ const Filters = ({
             onClick={() => toggleSection("price")}
             className="flex items-center justify-between w-full text-xs font-semibold uppercase tracking-widest text-slate-700 dark:text-slate-200 mb-3"
           >
-            <span>Max Price (₹{priceRange})</span>
+            <span>Max Price (${priceRange})</span>
             {openSections.price ? <FiChevronUp className="w-3.5 h-3.5" /> : <FiChevronDown className="w-3.5 h-3.5" />}
           </button>
           {openSections.price && (
@@ -141,15 +141,15 @@ const Filters = ({
               <input
                 type="range"
                 min="50"
-                max="150000"
+                max="1500"
                 step="50"
                 value={priceRange}
                 onChange={(e) => setPriceRange(Number(e.target.value))}
                 className="w-full accent-amber-500 bg-slate-200 dark:bg-slate-800 h-[3px] rounded-lg cursor-pointer"
               />
               <div className="flex justify-between text-[10px] font-mono text-slate-400 mt-2">
-                <span>₹50</span>
-                <span>₹1,500</span>
+                <span>$50</span>
+                <span>$1,500</span>
               </div>
             </div>
           )}
@@ -201,7 +201,7 @@ const Filters = ({
                   <button
                     key={color.name}
                     onClick={() => handleColorToggle(color.name)}
-                    className={`w-6 h-6 rounded-full border flex items-center justify-center transition-all ₹{
+                    className={`w-6 h-6 rounded-full border flex items-center justify-center transition-all ${
                       isActive ? "border-amber-500 scale-110 shadow-sm" : "border-slate-200 dark:border-slate-850"
                     }`}
                     style={{ backgroundColor: color.hex }}
@@ -230,7 +230,7 @@ const Filters = ({
                   <button
                     key={size}
                     onClick={() => handleSizeToggle(size)}
-                    className={`w-8 h-8 rounded text-[11px] font-mono flex items-center justify-center border transition-all ₹{
+                    className={`w-8 h-8 rounded text-[11px] font-mono flex items-center justify-center border transition-all ${
                       isActive
                         ? "bg-slate-900 border-slate-900 text-white dark:bg-white dark:border-white dark:text-slate-900 font-semibold"
                         : "border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:border-slate-800 dark:hover:border-slate-400"
