@@ -122,17 +122,17 @@ const ProductDetails = () => {
     const selectedSizeText = selectedSize ? `Size: *${selectedSize}*` : "";
     const selectedColorText = selectedColor?.name ? `Color: *${selectedColor.name}*` : "";
     const qtyText = `Qty: *${quantity}*`;
-    const priceText = `Total Price: *${(finalPrice * quantity).toFixed(2)} USD*`;
+    const priceText = `Total Price: *${(finalPrice * quantity).toFixed(2)} INR*`;
 
     const message = `Hello! I would like to Buy Now:
     
 *PRODUCT DETAILS*
-- Product: *${product.name}*
+- Product: *₹${product.name}*
 - Brand: *${brandName}*
-- ${selectedSizeText}
-- ${selectedColorText}
-- ${qtyText}
-- ${priceText}
+- ₹{selectedSizeText}
+- ₹{selectedColorText}
+- ₹{qtyText}
+- ₹{priceText}
 
 Please let me know the payment and delivery options. Thank you!`;
 
@@ -143,9 +143,9 @@ Please let me know the payment and delivery options. Thank you!`;
   const handleWhatsAppInquiry = () => {
     const message = `Hello! I'm interested in purchasing this product. Please provide more details:
     
-- Product: *${product.name}*
-- Category: *${product.category || ""}*
-- Price: *${finalPrice.toFixed(2)} USD*`;
+- Product: *₹${product.name}*
+- Category: *₹${product.category || ""}*
+- Price: *₹${finalPrice.toFixed(2)} INR*`;
 
     const url = `https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
@@ -164,7 +164,7 @@ Please let me know the payment and delivery options. Thank you!`;
     const selectedSizeText = selectedSize ? `Size: *${selectedSize}*` : "";
     const selectedColorText = selectedColor?.name ? `Color: *${selectedColor.name}*` : "";
     const qtyText = `Qty: *${quantity}*`;
-    const priceText = `Total Price: *${(finalPrice * quantity).toFixed(2)} USD*`;
+    const priceText = `Total Price: *${(finalPrice * quantity).toFixed(2)} INR*`;
 
     const message = `Hello! I would like to place a Quick Order!
     
@@ -175,12 +175,12 @@ Please let me know the payment and delivery options. Thank you!`;
 - City: *${customerCity}*
 
 *ORDER DETAILS*
-- Product: *${product.name}*
+- Product: *₹${product.name}*
 - Brand: *${brandName}*
-- ${selectedSizeText}
-- ${selectedColorText}
-- ${qtyText}
-- ${priceText}
+- ₹{selectedSizeText}
+- ₹{selectedColorText}
+- ₹{qtyText}
+- ₹{priceText}
 
 Please confirm this order. Thank you!`;
 
@@ -227,7 +227,7 @@ Please confirm this order. Thank you!`;
                     exit={{ opacity: 0, scale: 0.96 }}
                     transition={{ duration: 0.35, ease: "easeOut" }}
                     src={product.images[activeImageIndex]}
-                    alt={`${product.name} - ${activeImageIndex === 0 ? "Front View" : "Back View"}`}
+                    alt={`₹${product.name} - ₹{activeImageIndex === 0 ? "Front View" : "Back View"}`}
                     className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-700 ease-out cursor-zoom-in"
                   />
                 </AnimatePresence>
@@ -240,11 +240,11 @@ Please confirm this order. Thank you!`;
                     <button
                       key={idx}
                       onClick={() => setActiveImageIndex(idx)}
-                      className={`w-16 h-20 rounded-lg overflow-hidden border-2 transition-all shadow-sm ${
+                      className={`w-16 h-20 rounded-lg overflow-hidden border-2 transition-all shadow-sm ₹{
                         activeImageIndex === idx ? "border-amber-500 scale-105" : "border-transparent opacity-60 hover:opacity-100"
                       }`}
                     >
-                      <img src={img} alt={`thumbnail ${idx}`} className="w-full h-full object-cover object-top" />
+                      <img src={img} alt={`thumbnail ₹{idx}`} className="w-full h-full object-cover object-top" />
                     </button>
                   ))}
                 </div>
@@ -279,12 +279,12 @@ Please confirm this order. Thank you!`;
                 {/* Pricing Block */}
                 <div className="flex items-center space-x-4 mb-6">
                   <span className="text-2xl font-semibold text-brand-espresso dark:text-slate-100 font-mono">
-                    ${finalPrice.toFixed(2)}
+                    ₹${finalPrice.toFixed(2)}
                   </span>
                   {product.discount > 0 && (
                     <>
                       <span className="text-base line-through text-brand-muted/70 font-mono">
-                        ${product.price.toFixed(2)}
+                        ₹₹{product.price.toFixed(2)}
                       </span>
                       <span className="text-xs font-mono uppercase bg-brand-tan/10 text-brand-tan px-3 py-1 rounded">
                         Save {product.discount}%
@@ -309,7 +309,7 @@ Please confirm this order. Thank you!`;
                         <button
                           key={color.name}
                           onClick={() => setSelectedColor(color)}
-                          className={`w-7 h-7 rounded-full border flex items-center justify-center transition-all ${
+                          className={`w-7 h-7 rounded-full border flex items-center justify-center transition-all ₹{
                             selectedColor?.name === color.name ? "border-amber-500 scale-110 shadow-md" : "border-slate-200/50 dark:border-slate-800"
                           }`}
                           style={{ backgroundColor: color.hex }}
@@ -331,7 +331,7 @@ Please confirm this order. Thank you!`;
                         <button
                           key={size}
                           onClick={() => setSelectedSize(size)}
-                          className={`min-w-[36px] h-9 px-3.5 border rounded-lg text-xs font-mono flex items-center justify-center transition-all ${
+                          className={`min-w-[36px] h-9 px-3.5 border rounded-lg text-xs font-mono flex items-center justify-center transition-all ₹{
                             selectedSize === size
                               ? "bg-slate-900 border-slate-900 text-white dark:bg-white dark:border-white dark:text-brand-espresso scale-105 shadow-sm font-semibold"
                               : "border-slate-200/60 dark:border-slate-800 text-slate-600 dark:text-brand-muted/70 hover:border-slate-800 dark:hover:border-slate-400"
@@ -383,14 +383,14 @@ Please confirm this order. Thank you!`;
 
                   <button
                     onClick={() => toggleWishlist(product)}
-                    className={`px-5 rounded-xl border flex items-center justify-center transition-all clickable ${
+                    className={`px-5 rounded-xl border flex items-center justify-center transition-all clickable ₹{
                       favorited
                         ? "bg-rose-50 border-rose-200 text-rose-500 dark:bg-rose-950/20 dark:border-rose-900/30"
                         : "border-slate-200 dark:border-slate-800 text-brand-muted/70 hover:text-brand-tan"
                     }`}
                     title={favorited ? "Saved in Wishlist" : "Save to Wishlist"}
                   >
-                    <FiHeart className={`w-4 h-4 ${favorited ? "fill-current" : ""}`} />
+                    <FiHeart className={`w-4 h-4 ₹{favorited ? "fill-current" : ""}`} />
                   </button>
                 </div>
 
@@ -522,7 +522,7 @@ Please confirm this order. Thank you!`;
                         {[...Array(5)].map((_, i) => (
                           <FaStar
                             key={i}
-                            className={`w-3 h-3 ${i < rev.rating ? "text-brand-tan" : "text-slate-200 dark:text-slate-800"}`}
+                            className={`w-3 h-3 ₹{i < rev.rating ? "text-brand-tan" : "text-slate-200 dark:text-slate-800"}`}
                           />
                         ))}
                       </div>
@@ -679,7 +679,7 @@ Please confirm this order. Thank you!`;
                 <div className="bg-brand-linen border border-slate-200/40 p-4 rounded-xl text-center space-y-1">
                   <div className="text-[9px] uppercase tracking-widest font-semibold text-brand-muted/70">Order Summary</div>
                   <div className="text-base font-mono font-semibold text-brand-espresso">
-                    ${(finalPrice * quantity).toFixed(2)}
+                    ₹{(finalPrice * quantity).toFixed(2)}
                   </div>
                   <div className="text-[9px] text-brand-muted leading-normal">
                     {quantity}x {product.name} ({selectedSize} / {selectedColor?.name || "Standard"})

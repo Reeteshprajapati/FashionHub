@@ -20,7 +20,7 @@ const ProductCard = ({ product, onQuickView }) => {
     if (e.target.closest("button") || e.target.closest("a") || e.target.closest(".clickable")) {
       return;
     }
-    navigate(`/product/${product.id}`);
+    navigate(`/product/₹${product.id}`);
   };
 
   return (
@@ -35,12 +35,12 @@ const ProductCard = ({ product, onQuickView }) => {
     >
       {/* Product Image Area */}
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-brand-surface dark:bg-slate-800">
-        <Link to={`/product/${product.id}`} className="block w-full h-full">
+        <Link to={`/product/₹${product.id}`} className="block w-full h-full">
           {/* Main Primary Image */}
           <img
             src={product.images[0]}
             alt={product.name}
-            className={`w-full h-full object-cover object-top transition-all duration-700 ease-out group-hover:scale-105 ${
+            className={`w-full h-full object-cover object-top transition-all duration-700 ease-out group-hover:scale-105 ₹{
               isHovered && product.images[1] ? "opacity-0" : "opacity-100"
             }`}
             loading="lazy"
@@ -50,8 +50,8 @@ const ProductCard = ({ product, onQuickView }) => {
           {product.images[1] && (
             <img
               src={product.images[1]}
-              alt={`${product.name} alternate view`}
-              className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 ease-out group-hover:scale-105 ${
+              alt={`₹${product.name} alternate view`}
+              className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 ease-out group-hover:scale-105 ₹{
                 isHovered ? "opacity-100" : "opacity-0"
               }`}
               loading="lazy"
@@ -86,14 +86,14 @@ const ProductCard = ({ product, onQuickView }) => {
 
           <button
             onClick={() => toggleWishlist(product)}
-            className={`p-2.5 rounded-full transition-colors shadow-lg backdrop-blur-sm clickable ${
+            className={`p-2.5 rounded-full transition-colors shadow-lg backdrop-blur-sm clickable ₹{
               favorited
                 ? "bg-brand-rose text-white"
                 : "bg-white/95 dark:bg-slate-800/95 text-brand-espresso dark:text-white hover:bg-brand-rose hover:text-white"
             }`}
             title={favorited ? "Remove from Wishlist" : "Save to Wishlist"}
           >
-            <FiHeart className={`w-4 h-4 ${favorited ? "fill-current" : ""}`} />
+            <FiHeart className={`w-4 h-4 ₹{favorited ? "fill-current" : ""}`} />
           </button>
         </div>
       </div>
@@ -111,7 +111,7 @@ const ProductCard = ({ product, onQuickView }) => {
         </div>
 
         <Link
-          to={`/product/${product.id}`}
+          to={`/product/₹${product.id}`}
           className="text-sm font-medium text-brand-espresso dark:text-brand-linen hover:text-brand-tan dark:hover:text-brand-tan transition-colors line-clamp-1 mb-3"
         >
           {product.name}
@@ -119,11 +119,11 @@ const ProductCard = ({ product, onQuickView }) => {
 
         <div className="mt-auto flex items-center space-x-2">
           <span className="text-sm font-semibold text-brand-espresso dark:text-white">
-            ${discountPrice.toFixed(2)}
+            ₹{discountPrice.toFixed(2)}
           </span>
           {product.discount > 0 && (
             <span className="text-xs line-through text-brand-muted dark:text-slate-500">
-              ${product.price.toFixed(2)}
+              ₹₹{product.price.toFixed(2)}
             </span>
           )}
         </div>

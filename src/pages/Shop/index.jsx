@@ -14,7 +14,7 @@ const Shop = () => {
   // Filter States synced with URL query or initialized empty
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") || "");
   const [selectedBrands, setSelectedBrands] = useState([]);
-  const [priceRange, setPriceRange] = useState(1500);
+  const [priceRange, setPriceRange] = useState(150000);
   const [selectedRating, setSelectedRating] = useState(0);
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState([]);
@@ -61,7 +61,7 @@ const Shop = () => {
   const handleResetFilters = () => {
     setSelectedCategory("");
     setSelectedBrands([]);
-    setPriceRange(1500);
+    setPriceRange(150000);
     setSelectedRating(0);
     setSelectedColors([]);
     setSelectedSizes([]);
@@ -73,7 +73,7 @@ const Shop = () => {
   const activeFilterCount =
     (selectedCategory ? 1 : 0) +
     selectedBrands.length +
-    (priceRange < 1500 ? 1 : 0) +
+    (priceRange < 150000 ? 1 : 0) +
     (selectedRating > 0 ? 1 : 0) +
     selectedColors.length +
     selectedSizes.length +
@@ -180,7 +180,7 @@ const Shop = () => {
                 className="flex md:hidden items-center space-x-2 px-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-xs uppercase tracking-widest font-semibold transition-all shadow-sm active:scale-95"
               >
                 <FiSliders className="w-4 h-4 text-amber-500" />
-                <span>Filters {activeFilterCount > 0 && `(${activeFilterCount})`}</span>
+                <span>Filters {activeFilterCount > 0 && `(₹{activeFilterCount})`}</span>
               </button>
 
               <span className="text-xs text-slate-500 dark:text-slate-400 font-light font-mono">

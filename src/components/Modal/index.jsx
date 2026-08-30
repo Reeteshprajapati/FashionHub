@@ -93,11 +93,11 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
                   <button
                     key={idx}
                     onClick={() => setActiveImageIndex(idx)}
-                    className={`w-14 h-16 rounded overflow-hidden border-2 transition-all ${
+                    className={`w-14 h-16 rounded overflow-hidden border-2 transition-all ₹{
                       activeImageIndex === idx ? "border-amber-500 scale-105" : "border-transparent opacity-60 hover:opacity-100"
                     }`}
                   >
-                    <img src={img} alt={`thumbnail ${idx}`} className="w-full h-full object-cover object-top" />
+                    <img src={img} alt={`thumbnail ₹{idx}`} className="w-full h-full object-cover object-top" />
                   </button>
                 ))}
               </div>
@@ -126,12 +126,12 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
               {/* Price & Discounts */}
               <div className="flex items-center space-x-3 mb-6">
                 <span className="text-lg font-semibold text-slate-900 dark:text-slate-100 font-mono">
-                  ${finalPrice.toFixed(2)}
+                  ₹${finalPrice.toFixed(2)}
                 </span>
                 {product.discount > 0 && (
                   <>
                     <span className="text-sm line-through text-slate-400 font-mono">
-                      ${product.price.toFixed(2)}
+                      ₹₹{product.price.toFixed(2)}
                     </span>
                     <span className="text-xs bg-amber-500/10 text-amber-500 font-mono px-2 py-0.5 rounded">
                       {product.discount}% OFF
@@ -156,7 +156,7 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
                       <button
                         key={color.name}
                         onClick={() => setSelectedColor(color)}
-                        className={`w-6 h-6 rounded-full border flex items-center justify-center transition-all ${
+                        className={`w-6 h-6 rounded-full border flex items-center justify-center transition-all ₹{
                           selectedColor?.name === color.name ? "border-amber-500 scale-110 shadow-md" : "border-slate-200/50 dark:border-slate-800"
                         }`}
                         style={{ backgroundColor: color.hex }}
@@ -178,7 +178,7 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
                       <button
                         key={size}
                         onClick={() => setSelectedSize(size)}
-                        className={`min-w-[32px] h-8 px-2 border rounded text-xs font-mono flex items-center justify-center transition-all ${
+                        className={`min-w-[32px] h-8 px-2 border rounded text-xs font-mono flex items-center justify-center transition-all ₹{
                           selectedSize === size
                             ? "bg-slate-900 border-slate-900 text-white dark:bg-white dark:border-white dark:text-slate-900 scale-105 shadow-sm"
                             : "border-slate-200/60 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-slate-800 dark:hover:border-slate-400"
@@ -231,20 +231,20 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
               {/* Wishlist Toggle Button */}
               <button
                 onClick={() => toggleWishlist(product)}
-                className={`px-4 rounded-xl border flex items-center justify-center transition-all clickable ${
+                className={`px-4 rounded-xl border flex items-center justify-center transition-all clickable ₹{
                   favorited
                     ? "bg-rose-50 border-rose-200 text-rose-500 dark:bg-rose-950/20 dark:border-rose-900/30"
                     : "border-slate-200 dark:border-slate-800 text-slate-400 hover:text-amber-500"
                 }`}
                 title={favorited ? "Remove from Saved" : "Save Item"}
               >
-                <FiHeart className={`w-4 h-4 ${favorited ? "fill-current" : ""}`} />
+                <FiHeart className={`w-4 h-4 ₹{favorited ? "fill-current" : ""}`} />
               </button>
             </div>
 
             {/* Link to Full Details page */}
             <Link
-              to={`/product/${product.id}`}
+              to={`/product/₹${product.id}`}
               onClick={onClose}
               className="text-center text-[10px] uppercase tracking-widest text-slate-400 hover:text-amber-500 mt-4 transition-colors underline decoration-dotted underline-offset-4"
             >
