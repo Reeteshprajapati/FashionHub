@@ -119,11 +119,11 @@ const ProductCard = ({ product, onQuickView }) => {
 
         <div className="mt-auto flex items-center space-x-2">
           <span className="text-sm font-semibold text-brand-espresso dark:text-white">
-            ${discountPrice.toFixed(2)}
+            ₹{discountPrice.toFixed(2)}
           </span>
           {product.discount > 0 && (
             <span className="text-xs line-through text-brand-muted dark:text-slate-500">
-              ${product.price.toFixed(2)}
+              ₹{product.price.toFixed(2)}
             </span>
           )}
         </div>

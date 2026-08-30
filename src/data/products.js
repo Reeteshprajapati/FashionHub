@@ -5,7 +5,7 @@ export const products = [
     brand: "MAISON LUXE",
     category: "Women",
     subCategory: "Dresses",
-    price: 490,
+    price: 41650,
     discount: 10,
     rating: 4.9,
     images: [
@@ -37,7 +37,7 @@ export const products = [
     brand: "NOIR & CO",
     category: "Men",
     subCategory: "Jackets",
-    price: 650,
+    price: 55250,
     discount: 15,
     rating: 4.8,
     images: [
@@ -68,7 +68,7 @@ export const products = [
     brand: "AURA DESIGNS",
     category: "Women",
     subCategory: "Tops",
-    price: 180,
+    price: 15300,
     discount: 0,
     rating: 4.6,
     images: [
@@ -99,7 +99,7 @@ export const products = [
     brand: "VERTU SELECTION",
     category: "Men",
     subCategory: "Hoodies",
-    price: 290,
+    price: 24650,
     discount: 5,
     rating: 4.7,
     images: [
@@ -131,7 +131,7 @@ export const products = [
     brand: "VALENTIN",
     category: "Women",
     subCategory: "Skirts",
-    price: 320,
+    price: 27200,
     discount: 20,
     rating: 4.8,
     images: [
@@ -162,7 +162,7 @@ export const products = [
     brand: "MAISON LUXE",
     category: "Men",
     subCategory: "Shirts",
-    price: 220,
+    price: 18700,
     discount: 0,
     rating: 4.9,
     images: [
@@ -193,7 +193,7 @@ export const products = [
     brand: "AURA DESIGNS",
     category: "Women",
     subCategory: "Kurtis",
-    price: 240,
+    price: 20400,
     discount: 10,
     rating: 4.7,
     images: [
@@ -223,7 +223,7 @@ export const products = [
     brand: "NOIR & CO",
     category: "Men",
     subCategory: "T-Shirts",
-    price: 95,
+    price: 8075,
     discount: 0,
     rating: 4.5,
     images: [
@@ -254,7 +254,7 @@ export const products = [
     brand: "LUXE KIDS",
     category: "Kids",
     subCategory: "Boys Wear",
-    price: 150,
+    price: 12750,
     discount: 5,
     rating: 4.8,
     images: [
@@ -284,7 +284,7 @@ export const products = [
     brand: "LUXE KIDS",
     category: "Kids",
     subCategory: "Girls Wear",
-    price: 175,
+    price: 14875,
     discount: 10,
     rating: 4.9,
     images: [
@@ -314,7 +314,7 @@ export const products = [
     brand: "VALENTIN",
     category: "Premium",
     subCategory: "Designer Wear",
-    price: 1250,
+    price: 106250,
     discount: 0,
     rating: 5.0,
     images: [
@@ -345,7 +345,7 @@ export const products = [
     brand: "AURA DESIGNS",
     category: "Women",
     subCategory: "Sarees",
-    price: 520,
+    price: 44200,
     discount: 15,
     rating: 4.9,
     images: [
@@ -375,7 +375,7 @@ export const products = [
     brand: "NOIR & CO",
     category: "Premium",
     subCategory: "Limited Edition",
-    price: 980,
+    price: 83300,
     discount: 0,
     rating: 4.8,
     images: [
@@ -405,7 +405,7 @@ export const products = [
     brand: "LUXE KIDS",
     category: "Kids",
     subCategory: "Baby Fashion",
-    price: 110,
+    price: 9350,
     discount: 0,
     rating: 4.7,
     images: [
@@ -435,7 +435,7 @@ export const products = [
     brand: "MAISON LUXE",
     category: "Premium",
     subCategory: "Exclusive Collection",
-    price: 1450,
+    price: 123250,
     discount: 10,
     rating: 4.9,
     images: [
@@ -465,7 +465,7 @@ export const products = [
     brand: "VERTU SELECTION",
     category: "Men",
     subCategory: "Formal Wear",
-    price: 380,
+    price: 32300,
     discount: 0,
     rating: 4.7,
     images: [

@@ -122,7 +122,7 @@ const ProductDetails = () => {
     const selectedSizeText = selectedSize ? `Size: *${selectedSize}*` : "";
     const selectedColorText = selectedColor?.name ? `Color: *${selectedColor.name}*` : "";
     const qtyText = `Qty: *${quantity}*`;
-    const priceText = `Total Price: *${(finalPrice * quantity).toFixed(2)} USD*`;
+    const priceText = `Total Price: *${(finalPrice * quantity).toFixed(2)} INR*`;
 
     const message = `Hello! I would like to Buy Now:
     
@@ -145,7 +145,7 @@ Please let me know the payment and delivery options. Thank you!`;
     
 - Product: *${product.name}*
 - Category: *${product.category || ""}*
-- Price: *${finalPrice.toFixed(2)} USD*`;
+- Price: *₹{finalPrice.toFixed(2)} INR*`;
 
     const url = `https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
@@ -164,7 +164,7 @@ Please let me know the payment and delivery options. Thank you!`;
     const selectedSizeText = selectedSize ? `Size: *${selectedSize}*` : "";
     const selectedColorText = selectedColor?.name ? `Color: *${selectedColor.name}*` : "";
     const qtyText = `Qty: *${quantity}*`;
-    const priceText = `Total Price: *${(finalPrice * quantity).toFixed(2)} USD*`;
+    const priceText = `Total Price: *${(finalPrice * quantity).toFixed(2)} INR*`;
 
     const message = `Hello! I would like to place a Quick Order!
     
@@ -279,12 +279,12 @@ Please confirm this order. Thank you!`;
                 {/* Pricing Block */}
                 <div className="flex items-center space-x-4 mb-6">
                   <span className="text-2xl font-semibold text-brand-espresso dark:text-slate-100 font-mono">
-                    ${finalPrice.toFixed(2)}
+                    ₹{finalPrice.toFixed(2)}
                   </span>
                   {product.discount > 0 && (
                     <>
                       <span className="text-base line-through text-brand-muted/70 font-mono">
-                        ${product.price.toFixed(2)}
+                        ₹{product.price.toFixed(2)}
                       </span>
                       <span className="text-xs font-mono uppercase bg-brand-tan/10 text-brand-tan px-3 py-1 rounded">
                         Save {product.discount}%

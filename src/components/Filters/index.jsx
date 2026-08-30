@@ -133,7 +133,7 @@ const Filters = ({
             onClick={() => toggleSection("price")}
             className="flex items-center justify-between w-full text-xs font-semibold uppercase tracking-widest text-slate-700 dark:text-slate-200 mb-3"
           >
-            <span>Max Price (${priceRange})</span>
+            <span>Max Price (₹{priceRange})</span>
             {openSections.price ? <FiChevronUp className="w-3.5 h-3.5" /> : <FiChevronDown className="w-3.5 h-3.5" />}
           </button>
           {openSections.price && (
@@ -141,15 +141,15 @@ const Filters = ({
               <input
                 type="range"
                 min="50"
-                max="1500"
+                max="150000"
                 step="50"
                 value={priceRange}
                 onChange={(e) => setPriceRange(Number(e.target.value))}
                 className="w-full accent-amber-500 bg-slate-200 dark:bg-slate-800 h-[3px] rounded-lg cursor-pointer"
               />
               <div className="flex justify-between text-[10px] font-mono text-slate-400 mt-2">
-                <span>$50</span>
-                <span>$1,500</span>
+                <span>₹50</span>
+                <span>₹1,500</span>
               </div>
             </div>
           )}
