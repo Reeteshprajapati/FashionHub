@@ -141,7 +141,7 @@ const Filters = ({
               <input
                 type="range"
                 min="50"
-                max="150000"
+                max="20000"
                 step="50"
                 value={priceRange}
                 onChange={(e) => setPriceRange(Number(e.target.value))}

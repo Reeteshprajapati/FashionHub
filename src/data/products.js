@@ -5,7 +5,7 @@ export const products = [
     brand: "MAISON LUXE",
     category: "Women",
     subCategory: "Dresses",
-    price: 41650,
+    price: 3499,
     discount: 10,
     rating: 4.9,
     images: [
@@ -37,7 +37,7 @@ export const products = [
     brand: "NOIR & CO",
     category: "Men",
     subCategory: "Jackets",
-    price: 55250,
+    price: 4599,
     discount: 15,
     rating: 4.8,
     images: [
@@ -68,7 +68,7 @@ export const products = [
     brand: "AURA DESIGNS",
     category: "Women",
     subCategory: "Tops",
-    price: 15300,
+    price: 1299,
     discount: 0,
     rating: 4.6,
     images: [
@@ -99,7 +99,7 @@ export const products = [
     brand: "VERTU SELECTION",
     category: "Men",
     subCategory: "Hoodies",
-    price: 24650,
+    price: 2099,
     discount: 5,
     rating: 4.7,
     images: [
@@ -131,7 +131,7 @@ export const products = [
     brand: "VALENTIN",
     category: "Women",
     subCategory: "Skirts",
-    price: 27200,
+    price: 2299,
     discount: 20,
     rating: 4.8,
     images: [
@@ -162,7 +162,7 @@ export const products = [
     brand: "MAISON LUXE",
     category: "Men",
     subCategory: "Shirts",
-    price: 18700,
+    price: 1599,
     discount: 0,
     rating: 4.9,
     images: [
@@ -193,7 +193,7 @@ export const products = [
     brand: "AURA DESIGNS",
     category: "Women",
     subCategory: "Kurtis",
-    price: 20400,
+    price: 1699,
     discount: 10,
     rating: 4.7,
     images: [
@@ -223,7 +223,7 @@ export const products = [
     brand: "NOIR & CO",
     category: "Men",
     subCategory: "T-Shirts",
-    price: 8075,
+    price: 699,
     discount: 0,
     rating: 4.5,
     images: [
@@ -254,7 +254,7 @@ export const products = [
     brand: "LUXE KIDS",
     category: "Kids",
     subCategory: "Boys Wear",
-    price: 12750,
+    price: 1099,
     discount: 5,
     rating: 4.8,
     images: [
@@ -284,7 +284,7 @@ export const products = [
     brand: "LUXE KIDS",
     category: "Kids",
     subCategory: "Girls Wear",
-    price: 14875,
+    price: 1199,
     discount: 10,
     rating: 4.9,
     images: [
@@ -314,7 +314,7 @@ export const products = [
     brand: "VALENTIN",
     category: "Premium",
     subCategory: "Designer Wear",
-    price: 106250,
+    price: 8899,
     discount: 0,
     rating: 5.0,
     images: [
@@ -345,7 +345,7 @@ export const products = [
     brand: "AURA DESIGNS",
     category: "Women",
     subCategory: "Sarees",
-    price: 44200,
+    price: 3699,
     discount: 15,
     rating: 4.9,
     images: [
@@ -375,7 +375,7 @@ export const products = [
     brand: "NOIR & CO",
     category: "Premium",
     subCategory: "Limited Edition",
-    price: 83300,
+    price: 6899,
     discount: 0,
     rating: 4.8,
     images: [
@@ -405,7 +405,7 @@ export const products = [
     brand: "LUXE KIDS",
     category: "Kids",
     subCategory: "Baby Fashion",
-    price: 9350,
+    price: 799,
     discount: 0,
     rating: 4.7,
     images: [
@@ -435,7 +435,7 @@ export const products = [
     brand: "MAISON LUXE",
     category: "Premium",
     subCategory: "Exclusive Collection",
-    price: 123250,
+    price: 10299,
     discount: 10,
     rating: 4.9,
     images: [
@@ -465,7 +465,7 @@ export const products = [
     brand: "VERTU SELECTION",
     category: "Men",
     subCategory: "Formal Wear",
-    price: 32300,
+    price: 2699,
     discount: 0,
     rating: 4.7,
     images: [
@@ -497,7 +497,7 @@ export const products = [
     brand: "VINCENZO",
     category: "Men",
     subCategory: "Suits",
-    price: 125000,
+    price: 10399,
     discount: 5,
     rating: 5.0,
     images: [
@@ -516,7 +516,7 @@ export const products = [
     brand: "NORDIC HERITAGE",
     category: "Men",
     subCategory: "Knitwear",
-    price: 32000,
+    price: 2699,
     discount: 0,
     rating: 4.8,
     images: [
@@ -535,7 +535,7 @@ export const products = [
     brand: "AURELIA LUXE",
     category: "Women",
     subCategory: "Ethnic Wear",
-    price: 185000,
+    price: 15399,
     discount: 10,
     rating: 4.9,
     images: [
@@ -554,7 +554,7 @@ export const products = [
     brand: "MAISON LUXE",
     category: "Women",
     subCategory: "Outerwear",
-    price: 68000,
+    price: 5699,
     discount: 15,
     rating: 4.7,
     images: [

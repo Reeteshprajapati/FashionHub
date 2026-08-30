@@ -14,7 +14,7 @@ const Shop = () => {
   // Filter States synced with URL query or initialized empty
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") || "");
   const [selectedBrands, setSelectedBrands] = useState([]);
-  const [priceRange, setPriceRange] = useState(150000);
+  const [priceRange, setPriceRange] = useState(20000);
   const [selectedRating, setSelectedRating] = useState(0);
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState([]);
@@ -61,7 +61,7 @@ const Shop = () => {
   const handleResetFilters = () => {
     setSelectedCategory("");
     setSelectedBrands([]);
-    setPriceRange(150000);
+    setPriceRange(20000);
     setSelectedRating(0);
     setSelectedColors([]);
     setSelectedSizes([]);
@@ -73,7 +73,7 @@ const Shop = () => {
   const activeFilterCount =
     (selectedCategory ? 1 : 0) +
     selectedBrands.length +
-    (priceRange < 150000 ? 1 : 0) +
+    (priceRange < 20000 ? 1 : 0) +
     (selectedRating > 0 ? 1 : 0) +
     selectedColors.length +
     selectedSizes.length +
