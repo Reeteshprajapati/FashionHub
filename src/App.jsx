@@ -32,7 +32,7 @@ function App() {
         <>
           {/* Promotional Top Banner */}
           <div className="bg-brand-espresso dark:bg-brand-darktan text-brand-linen text-center py-2 text-[10px] sm:text-xs tracking-[0.15em] uppercase font-semibold z-50 relative">
-            Complimentary Shipping on all orders over ₹10,000 &bull; Secure Global Delivery
+            Complimentary Shipping on all orders over ₹2,999 &bull; Secure Global Delivery
           </div>
 
           {/* Sticky Global Header Navbar */}
