@@ -122,7 +122,7 @@ const ProductDetails = () => {
     const selectedSizeText = selectedSize ? `Size: *${selectedSize}*` : "";
     const selectedColorText = selectedColor?.name ? `Color: *${selectedColor.name}*` : "";
     const qtyText = `Qty: *${quantity}*`;
-    const priceText = `Total Price: *${(finalPrice * quantity).toFixed(2)} INR*`;
+    const priceText = `Total Price: *₹${(finalPrice * quantity).toFixed(2)} INR*`;
 
     const message = `Hello! I would like to Buy Now:
     
@@ -164,7 +164,7 @@ Please let me know the payment and delivery options. Thank you!`;
     const selectedSizeText = selectedSize ? `Size: *${selectedSize}*` : "";
     const selectedColorText = selectedColor?.name ? `Color: *${selectedColor.name}*` : "";
     const qtyText = `Qty: *${quantity}*`;
-    const priceText = `Total Price: *${(finalPrice * quantity).toFixed(2)} INR*`;
+    const priceText = `Total Price: *₹${(finalPrice * quantity).toFixed(2)} INR*`;
 
     const message = `Hello! I would like to place a Quick Order!
     
