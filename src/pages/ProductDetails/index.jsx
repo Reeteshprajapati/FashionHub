@@ -145,7 +145,7 @@ Please let me know the payment and delivery options. Thank you!`;
     
 - Product: *${product.name}*
 - Category: *${product.category || ""}*
-- Price: *₹{finalPrice.toFixed(2)} INR*`;
+- Price: *₹${finalPrice.toFixed(2)} INR*`;
 
     const url = `https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
